@@ -2,6 +2,7 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="gt.policy">
 
   <i18n:registerTranslations directory="locales" />
@@ -33,4 +34,12 @@
       factory=".setuphandlers.HiddenProfiles"
       name="gt.policy-hiddenprofiles" />
 
+  <configure zcml:condition="installed AccessControl.security">
+
+    <permission
+      id="gt.policy.addNothing"
+      title="gt.policy: Add nothing"
+      />
+
+</configure>
 </configure>
