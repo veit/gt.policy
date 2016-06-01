@@ -11,6 +11,14 @@
       layer="gt.policy.interfaces.IGtPolicyLayer"
       />
 
+    <browser:page
+        name="sharing"
+        for="*"
+        layer="..interfaces.IGtPolicyLayer"
+        class=".sharing.SharingView"
+        permission="plone.DelegateRoles"
+        />
+
   <!-- Publish static files -->
   <browser:resourceDirectory
       name="gt.policy"
