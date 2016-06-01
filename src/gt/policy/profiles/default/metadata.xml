@@ -3,5 +3,6 @@
   <version>1000</version>
   <dependencies>
     <dependency>profile-collective.liveblog:default</dependency>
+    <dependency>profile-gt.qmdocument:default</dependency>
   </dependencies>
 </metadata>
