@@ -3,6 +3,7 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="gt.policy">
 
   <i18n:registerTranslations directory="locales" />
@@ -34,6 +35,11 @@
       factory=".setuphandlers.HiddenProfiles"
       name="gt.policy-hiddenprofiles" />
 
+  <browser:jbot
+      directory="overrides"
+      layer=".interfaces.IGtPolicyLayer"
+  />
+
   <configure zcml:condition="installed AccessControl.security">
 
     <permission
@@ -41,5 +47,5 @@
       title="gt.policy: Add nothing"
       />
 
-</configure>
+  </configure>
 </configure>
