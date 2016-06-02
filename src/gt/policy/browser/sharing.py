@@ -22,6 +22,8 @@ from plone.app.workflow.events import LocalrolesModifiedEvent
 
 import json
 
+from gt.policy import _
+
 AUTH_GROUP = 'AuthenticatedUsers'
 STICKY = (AUTH_GROUP, )
 

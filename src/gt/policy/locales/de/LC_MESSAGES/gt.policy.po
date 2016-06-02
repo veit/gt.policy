@@ -11,20 +11,20 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Language-Code: de\n"
+"Language-Name: German\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: gt.policy\n"
 
 #: gt.policy/src/gt/policy/browser/sharing.py:112
 msgid "Changes saved."
-msgstr ""
+msgstr "Die Änderungen wurden gespeichert."
 
 #: gt.policy/src/gt/policy/browser/sharing.py:260
 msgid "Logged-in users"
-msgstr ""
+msgstr "Angemeldete Nutzer"
 
 #: gt.policy/src/gt/policy/browser/sharing.py:361
 msgid "Search for user or group"
-msgstr ""
+msgstr "Suche nach Nutzern oder Gruppen"
 
