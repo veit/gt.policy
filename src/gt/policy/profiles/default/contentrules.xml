@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<contentrules>
+ <rule name="rule-1"
+    title="Benutzer benachrichtigen bei Hinzuf&#252;gen eines Site Administrators"
+    cascading="False" description="" enabled="True"
+    event="Products.PluggableAuthService.interfaces.events.IPrincipalCreatedEvent"
+    stop-after="False">
+  <conditions>
+   <condition type="plone.conditions.Role">
+    <property name="role_names">
+     <element>Site Administrator</element>
+    </property>
+   </condition>
+  </conditions>
+  <actions>
+   <action type="plone.actions.Notify">
+    <property name="message">Site-Administrator hinzugef&#252;gt</property>
+    <property name="message_type">info</property>
+   </action>
+   <action type="plone.actions.Mail">
+    <property name="source">postmaster@gimtec.de</property>
+    <property
+       name="message">Der Nutzer mit der ID ${id} ist von ${user_fullname} mit der E-Mail ${user_email}	angelegt worden.</property>
+    <property name="subject">Site-Administrator hinzugef&#252;gt</property>
+    <property name="recipients">test@veit-schiele.de</property>
+    <property name="exclude_actor">False</property>
+   </action>
+  </actions>
+ </rule>
+ <assignment name="rule-1" bubbles="True" enabled="True" location=""/>
+</contentrules>
+
